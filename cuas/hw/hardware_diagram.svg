@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Malgun Gothic, 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374D40"/>
+    </marker>
+    <marker id="aw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C98F00"/>
+    </marker>
+    <style>
+      .ttl { font-size: 40px; font-weight: 700; fill: #0E341B; }
+      .lead { font-size: 18px; font-weight: 700; fill: #3A3F55; }
+      .sec { font-size: 20px; font-weight: 700; fill: #375623; }
+      .bt { font-size: 16px; font-weight: 700; fill: #3A3F55; }
+      .bs { font-size: 13px; font-weight: 600; fill: #666666; }
+      .lb { font-size: 13px; font-weight: 600; fill: #374D40; }
+      .note { font-size: 14px; font-weight: 600; fill: #666666; }
+      .box { fill: #FFFFFF; stroke: #BFBFBF; stroke-width: 1.5; }
+      .panel { fill: none; stroke: #BFBFBF; stroke-width: 1.5; }
+      .frame { fill: none; stroke: #9AA79F; stroke-width: 1.2; stroke-dasharray: 6 4; }
+      .nu { fill: #FFF4D6; stroke: #FFB700; stroke-width: 3; }
+      .w { stroke: #374D40; stroke-width: 2; fill: none; }
+      .rf { stroke: #374D40; stroke-width: 2; fill: none; stroke-dasharray: 7 5; }
+      .rfa { stroke: #C98F00; stroke-width: 2.2; fill: none; stroke-dasharray: 7 5; }
+      .bg { fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+
+  <!-- 제목 -->
+  <text x="40" y="62" class="ttl">하드웨어 구성도</text>
+  <text x="44" y="102" class="lead">정찰드론이 분류하면 관제 로그에서 사람이 확인함. 풍선은 추적 태그를 걸어 따라가고, 무인기는 요격 드론(시뮬)으로 대응함</text>
+
+  <!-- 범례 -->
+  <line x1="1150" y1="56" x2="1195" y2="56" class="w"/>
+  <text x="1203" y="61" class="bs">유선·기구 연결</text>
+  <line x1="1310" y1="56" x2="1355" y2="56" class="rf"/>
+  <text x="1363" y="61" class="bs">무선</text>
+  <rect x="1420" y="47" width="22" height="18" rx="3" class="nu"/>
+  <text x="1450" y="61" class="bs">NUCODE (SC2)</text>
+
+  <!-- ===== ① 정찰드론 ===== -->
+  <rect x="40" y="130" width="500" height="570" rx="6" class="panel"/>
+  <text x="60" y="163" class="sec">① 정찰드론 (실물)</text>
+
+  <!-- 지상 쪽 -->
+  <rect x="55" y="200" width="145" height="70" rx="5" class="box"/>
+  <text x="127" y="228" text-anchor="middle" class="bt">표적 화면</text>
+  <text x="127" y="250" text-anchor="middle" class="bs">새·풍선·무인기 사진</text>
+
+  <rect x="55" y="405" width="145" height="56" rx="5" class="box"/>
+  <text x="127" y="429" text-anchor="middle" class="bt">조종기 TX12</text>
+  <text x="127" y="449" text-anchor="middle" class="bs">ELRS 2.4GHz</text>
+
+  <rect x="55" y="510" width="145" height="56" rx="5" class="box"/>
+  <text x="127" y="534" text-anchor="middle" class="bt">FPV 고글</text>
+  <text x="127" y="554" text-anchor="middle" class="bs">심사위원 착용</text>
+
+  <!-- 기체 -->
+  <rect x="212" y="180" width="314" height="410" rx="6" class="frame"/>
+  <text x="224" y="200" class="bs">기체</text>
+
+  <rect x="336" y="200" width="182" height="56" rx="5" class="box"/>
+  <text x="427" y="224" text-anchor="middle" class="bt">Pi Camera v2</text>
+  <text x="427" y="244" text-anchor="middle" class="bs">160x120</text>
+
+  <rect x="336" y="300" width="182" height="56" rx="5" class="box"/>
+  <text x="427" y="324" text-anchor="middle" class="bt">Raspberry Pi Zero W</text>
+  <text x="427" y="344" text-anchor="middle" class="bs">분류 코드 · recon_node</text>
+
+  <rect x="336" y="405" width="182" height="56" rx="5" class="box"/>
+  <text x="427" y="429" text-anchor="middle" class="bt">FC DAKEFPV F4</text>
+  <text x="427" y="449" text-anchor="middle" class="bs">Betaflight · OSD 글자</text>
+
+  <rect x="336" y="510" width="182" height="56" rx="5" class="box"/>
+  <text x="427" y="534" text-anchor="middle" class="bt">아날로그 VTX</text>
+  <text x="427" y="554" text-anchor="middle" class="bs">5.8GHz 영상</text>
+
+  <rect x="225" y="405" width="100" height="56" rx="5" class="box"/>
+  <text x="275" y="429" text-anchor="middle" class="bt">ELRS 수신기</text>
+  <text x="275" y="449" text-anchor="middle" class="bs">조종 신호</text>
+
+  <!-- 연결 -->
+  <path d="M200,235 L334,228" class="rf" marker-end="url(#a)"/>
+  <rect x="236" y="208" width="60" height="18" class="bg"/>
+  <text x="266" y="222" text-anchor="middle" class="lb">카메라로 비춤</text>
+  <path d="M427,256 L427,298" class="w" marker-end="url(#a)"/>
+  <text x="435" y="282" class="lb">CSI</text>
+  <path d="M427,356 L427,403" class="w" marker-end="url(#a)"/>
+  <text x="419" y="377" text-anchor="end" class="lb">UART · MSP</text>
+  <text x="419" y="394" text-anchor="end" class="bs">판정 → OSD 글자</text>
+  <path d="M325,433 L334,433" class="w" marker-end="url(#a)"/>
+  <path d="M200,433 L223,433" class="rf" marker-end="url(#a)"/>
+  <path d="M427,461 L427,508" class="w" marker-end="url(#a)"/>
+  <text x="435" y="489" class="lb">영상 + OSD</text>
+  <path d="M336,538 L202,538" class="rf" marker-end="url(#a)"/>
+  <text x="272" y="530" text-anchor="middle" class="lb">5.8GHz</text>
+
+  <text x="60" y="630" class="note">분류 결과를 고글 화면(OSD 글자)과</text>
+  <text x="60" y="652" class="note">관제 로그(Wi-Fi)로 동시에 보냄</text>
+
+  <!-- ===== ② 관제 노트북 ===== -->
+  <rect x="580" y="130" width="440" height="570" rx="6" class="panel"/>
+  <text x="600" y="163" class="sec">② 관제 노트북</text>
+
+  <rect x="600" y="185" width="400" height="395" rx="6" class="frame"/>
+  <text x="612" y="205" class="bs">노트북 (Windows + WSL)</text>
+
+  <rect x="620" y="225" width="360" height="140" rx="5" class="box"/>
+  <text x="800" y="256" text-anchor="middle" class="bt">관제 로그 · ground_station.py</text>
+  <text x="800" y="284" text-anchor="middle" class="bs">탐지 기록 실시간 표시, 사람이 확인 후 Enter</text>
+  <text x="800" y="308" text-anchor="middle" class="bs">새 = 상황 종료 / 풍선 = 추적 / 무인기 = 요격</text>
+  <text x="800" y="332" text-anchor="middle" class="bs">판정 정정·오탐 기록, CSV 저장</text>
+
+  <rect x="620" y="455" width="360" height="105" rx="5" class="box"/>
+  <text x="800" y="486" text-anchor="middle" class="bt">요격 드론 시뮬 · A.R.M.S.</text>
+  <text x="800" y="512" text-anchor="middle" class="bs">Gazebo (WSL), 카메라 락온 + PN 유도</text>
+  <text x="800" y="536" text-anchor="middle" class="bs">상태 회신: 발진 → 추적 → 명중</text>
+
+  <path d="M740,365 L740,453" class="w" marker-end="url(#a)"/>
+  <text x="732" y="400" text-anchor="end" class="lb">UDP 9510</text>
+  <text x="732" y="420" text-anchor="end" class="lb">요격 명령</text>
+  <path d="M860,455 L860,367" class="w" marker-end="url(#a)"/>
+  <text x="868" y="415" class="lb">상태 회신</text>
+
+  <text x="600" y="630" class="note">화면: 왼쪽 탐지 로그 | 오른쪽 요격 시뮬</text>
+  <text x="600" y="652" class="note">무선 구간은 모두 같은 Wi-Fi 핫스팟 사용</text>
+
+  <!-- 정찰드론 → 관제 로그 -->
+  <path d="M518,328 L618,328" class="rf" marker-end="url(#a)"/>
+  <rect x="521" y="300" width="96" height="20" class="bg"/>
+  <text x="569" y="315" text-anchor="middle" class="lb">Wi-Fi · UDP 9500</text>
+  <rect x="526" y="334" width="86" height="20" class="bg"/>
+  <text x="569" y="349" text-anchor="middle" class="bs">판정·신뢰도</text>
+
+  <!-- ===== ③ 풍선 대응 ===== -->
+  <rect x="1060" y="130" width="500" height="570" rx="6" class="panel"/>
+  <text x="1080" y="163" class="sec">③ 풍선 대응: 추적 태그 부착 (실물)</text>
+
+  <rect x="1085" y="195" width="200" height="56" rx="5" class="box"/>
+  <text x="1185" y="219" text-anchor="middle" class="bt">추적 드론 (FPV)</text>
+  <text x="1185" y="239" text-anchor="middle" class="bs">조종사가 줄 옆으로 접근</text>
+
+  <rect x="1085" y="280" width="200" height="50" rx="5" class="box"/>
+  <text x="1185" y="301" text-anchor="middle" class="bt">카본 막대 40cm</text>
+  <text x="1185" y="320" text-anchor="middle" class="bs">프로펠러와 줄 사이 거리 확보</text>
+
+  <rect x="1085" y="359" width="200" height="50" rx="5" class="box"/>
+  <text x="1185" y="380" text-anchor="middle" class="bt">자석 연결부</text>
+  <text x="1185" y="399" text-anchor="middle" class="bs">드론이 뒤로 빠지면 분리</text>
+
+  <rect x="1085" y="438" width="200" height="56" rx="5" class="box"/>
+  <text x="1185" y="462" text-anchor="middle" class="bt">V자 깔때기 + 카라비너</text>
+  <text x="1185" y="482" text-anchor="middle" class="bs">줄을 받아 한 방향으로 가둠</text>
+
+  <rect x="1085" y="523" width="200" height="74" rx="5" class="nu"/>
+  <text x="1185" y="548" text-anchor="middle" class="bt">추적 태그 · NUCODE 보드</text>
+  <text x="1185" y="569" text-anchor="middle" class="bs">Wi-Fi/BLE로 신호 송신</text>
+  <text x="1185" y="588" text-anchor="middle" class="bs">+ 1S 배터리 (약 20~30g)</text>
+
+  <path d="M1185,251 L1185,278" class="w" marker-end="url(#a)"/>
+  <path d="M1185,330 L1185,357" class="w" marker-end="url(#a)"/>
+  <path d="M1185,409 L1185,436" class="w" marker-end="url(#a)"/>
+  <path d="M1185,494 L1185,521" class="w" marker-end="url(#a)"/>
+
+  <!-- 풍선 그림 -->
+  <circle cx="1450" cy="240" r="50" fill="#F4F4F4" stroke="#9A9A9A" stroke-width="1.5"/>
+  <text x="1450" y="246" text-anchor="middle" class="bt">풍선</text>
+  <line x1="1450" y1="290" x2="1450" y2="540" stroke="#7A7A7A" stroke-width="2"/>
+  <rect x="1425" y="540" width="50" height="40" rx="3" fill="#F4F4F4" stroke="#9A9A9A" stroke-width="1.5"/>
+  <text x="1450" y="600" text-anchor="middle" class="bs">짐 봉투</text>
+  <text x="1440" y="330" text-anchor="end" class="bs">풍선 줄</text>
+  <text x="1440" y="348" text-anchor="end" class="bs">(몸통은 안 건드림)</text>
+
+  <path d="M1285,466 L1446,466" class="rfa" marker-end="url(#aw)"/>
+  <text x="1366" y="456" text-anchor="middle" class="lb">줄을 깔때기로 받음</text>
+  <path d="M1285,560 L1446,505" class="rfa" marker-end="url(#aw)"/>
+  <text x="1300" y="618" class="bs">걸린 뒤 깔때기·태그만</text>
+  <text x="1300" y="636" class="bs">줄에 남고 드론은 복귀</text>
+
+  <!-- 태그 → 관제 로그 -->
+  <path d="M1085,560 L1040,560 L1040,300 L982,300" class="rfa" marker-end="url(#aw)"/>
+  <rect x="1031" y="350" width="18" height="150" class="bg"/>
+  <text transform="translate(1045,425) rotate(-90)" text-anchor="middle" class="lb">Wi-Fi · 태그 신호</text>
+
+  <!-- ===== 대응 흐름 ===== -->
+  <text x="40" y="742" class="sec">대응 흐름</text>
+  <rect x="40" y="772" width="220" height="70" rx="5" class="box"/>
+  <text x="150" y="803" text-anchor="middle" class="bt">정찰드론 분류</text>
+  <text x="150" y="825" text-anchor="middle" class="bs">새 · 풍선 · 무인기</text>
+  <path d="M260,807 L308,807" class="w" marker-end="url(#a)"/>
+  <rect x="310" y="772" width="240" height="70" rx="5" class="box"/>
+  <text x="430" y="803" text-anchor="middle" class="bt">관제 로그 · 사람 확인</text>
+  <text x="430" y="825" text-anchor="middle" class="bs">Enter 로 대응 승인</text>
+
+  <path d="M550,807 L590,807 L590,750 L1410,750" class="w"/>
+  <path d="M760,750 L760,770" class="w" marker-end="url(#a)"/>
+  <path d="M1080,750 L1080,770" class="w" marker-end="url(#a)"/>
+  <path d="M1410,750 L1410,770" class="w" marker-end="url(#a)"/>
+
+  <rect x="620" y="772" width="280" height="70" rx="5" class="box"/>
+  <text x="760" y="803" text-anchor="middle" class="bt">새 → 상황 종료</text>
+  <text x="760" y="825" text-anchor="middle" class="bs">출동 없음, 기록만 남김</text>
+  <rect x="930" y="772" width="300" height="70" rx="5" class="nu"/>
+  <text x="1080" y="803" text-anchor="middle" class="bt">풍선 → 추적 태그 부착</text>
+  <text x="1080" y="825" text-anchor="middle" class="bs">터뜨리지 않고 따라감 (실물 · NUCODE)</text>
+  <rect x="1260" y="772" width="300" height="70" rx="5" class="box"/>
+  <text x="1410" y="803" text-anchor="middle" class="bt">무인기 → 요격 드론</text>
+  <text x="1410" y="825" text-anchor="middle" class="bs">A.R.M.S. 시뮬 (Gazebo)</text>
+
+  <text x="1560" y="880" text-anchor="end" class="bs">NUCODE 보드 세부 사양(칩·핀)은 온보딩 후 확정</text>
+</svg>

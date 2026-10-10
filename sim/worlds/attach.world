@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+  <world name="attach">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>500</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.55 0.55 0.55 1</ambient>
+      <background>0.55 0.72 0.92 1</background>
+      <shadows>false</shadows>
+      <sky>
+        <time>12</time>
+        <clouds><speed>4</speed><humidity>0.6</humidity><mean_size>0.6</mean_size></clouds>
+      </sky>
+    </scene>
+
+    <model name="bg_tree1"><static>true</static><pose>-35 30 2 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><cylinder><radius>1.5</radius><length>4</length></cylinder></geometry>
+        <material><ambient>0.1 0.35 0.1 1</ambient><diffuse>0.12 0.4 0.12 1</diffuse></material></visual></link></model>
+    <model name="bg_bldg"><static>true</static><pose>15 -18 4 0 0 0.3</pose>
+      <link name="l"><visual name="v"><geometry><box><size>8 6 8</size></box></geometry>
+        <material><ambient>0.5 0.5 0.55 1</ambient><diffuse>0.55 0.55 0.6 1</diffuse></material></visual></link></model>
+
+    <model name="balloon">
+      <pose>6 0 3.5 0 0 0</pose>
+      <link name="link">
+        <gravity>false</gravity>
+        <kinematic>true</kinematic>
+        <visual name="v">
+          <geometry><sphere><radius>1.0</radius></sphere></geometry>
+          <material><ambient>0.7 0.05 0.05 1</ambient><diffuse>0.85 0.08 0.08 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular></material>
+        </visual>
+        <visual name="bag">
+          <pose>0 0 -2.9 0 0 0</pose>
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+          <material><ambient>0.85 0.85 0.8 1</ambient><diffuse>0.85 0.85 0.8 1</diffuse></material>
+        </visual>
+        <visual name="string">
+          <pose>0 0 -1.8 0 0 0</pose>
+          <geometry><cylinder><radius>0.012</radius><length>1.6</length></cylinder></geometry>
+          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+
+    <model name="drone_tgt">
+      <pose>0 0 -60 0 0 0</pose>
+      <link name="link">
+        <gravity>false</gravity>
+        <kinematic>true</kinematic>
+        <visual name="body"><geometry><box><size>0.7 0.5 0.3</size></box></geometry>
+          <material><ambient>0.7 0.05 0.05 1</ambient><diffuse>0.85 0.08 0.08 1</diffuse></material></visual>
+        <visual name="arm1"><pose>0 0 0 0 0 0.785</pose><geometry><box><size>1.5 0.08 0.06</size></box></geometry>
+          <material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+        <visual name="arm2"><pose>0 0 0 0 0 -0.785</pose><geometry><box><size>1.5 0.08 0.06</size></box></geometry>
+          <material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+        <visual name="r1"><pose>0.53 0.53 0.06 0 0 0</pose><geometry><cylinder><radius>0.36</radius><length>0.05</length></cylinder></geometry>
+          <material><ambient>0.7 0.05 0.05 1</ambient><diffuse>0.85 0.08 0.08 1</diffuse></material></visual>
+        <visual name="r2"><pose>0.53 -0.53 0.06 0 0 0</pose><geometry><cylinder><radius>0.36</radius><length>0.05</length></cylinder></geometry>
+          <material><ambient>0.7 0.05 0.05 1</ambient><diffuse>0.85 0.08 0.08 1</diffuse></material></visual>
+        <visual name="r3"><pose>-0.53 0.53 0.06 0 0 0</pose><geometry><cylinder><radius>0.36</radius><length>0.05</length></cylinder></geometry>
+          <material><ambient>0.7 0.05 0.05 1</ambient><diffuse>0.85 0.08 0.08 1</diffuse></material></visual>
+        <visual name="r4"><pose>-0.53 -0.53 0.06 0 0 0</pose><geometry><cylinder><radius>0.36</radius><length>0.05</length></cylinder></geometry>
+          <material><ambient>0.7 0.05 0.05 1</ambient><diffuse>0.85 0.08 0.08 1</diffuse></material></visual>
+        <visual name="cam"><pose>0.38 0 -0.12 0 0 0</pose><geometry><sphere><radius>0.09</radius></sphere></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient></material></visual>
+      </link>
+    </model>
+
+
+    <model name="tag">
+      <pose>0 0 -70 0 0 0</pose>
+      <link name="link">
+        <gravity>false</gravity>
+        <kinematic>true</kinematic>
+        <visual name="armL"><pose>0.08 0.075 0 0 0 0.75</pose><geometry><box><size>0.22 0.012 0.012</size></box></geometry>
+          <material><ambient>0.75 0.75 0.78 1</ambient><diffuse>0.8 0.8 0.82 1</diffuse></material></visual>
+        <visual name="armR"><pose>0.08 -0.075 0 0 0 -0.75</pose><geometry><box><size>0.22 0.012 0.012</size></box></geometry>
+          <material><ambient>0.75 0.75 0.78 1</ambient><diffuse>0.8 0.8 0.82 1</diffuse></material></visual>
+        <visual name="clip"><pose>0 0 0 1.5708 0 0</pose><geometry><cylinder><radius>0.03</radius><length>0.02</length></cylinder></geometry>
+          <material><ambient>0.3 0.3 0.32 1</ambient></material></visual>
+        <visual name="board"><pose>-0.02 0 -0.11 0 0 0</pose><geometry><box><size>0.12 0.08 0.17</size></box></geometry>
+          <material><ambient>1.0 0.72 0.0 1</ambient><diffuse>1.0 0.72 0.0 1</diffuse><emissive>0.35 0.25 0 1</emissive></material></visual>
+        <visual name="led"><pose>-0.02 0.042 -0.06 0 0 0</pose><geometry><sphere><radius>0.012</radius></sphere></geometry>
+          <material><ambient>0 1 0.2 1</ambient><emissive>0 0.9 0.2 1</emissive></material></visual>
+      </link>
+    </model>
+
+
+    <model name="chasecam">
+      <pose>-6 0 3 0 0 0</pose>
+      <link name="l">
+        <gravity>false</gravity>
+        <kinematic>true</kinematic>
+        <sensor name="chase_cam" type="camera">
+          <always_on>true</always_on>
+          <update_rate>9</update_rate>
+          <camera>
+            <horizontal_fov>1.2</horizontal_fov>
+            <image><width>960</width><height>540</height><format>R8G8B8</format></image>
+            <clip><near>0.1</near><far>300</far></clip>
+          </camera>
+        </sensor>
+      </link>
+    </model>
+
+    <model name="interceptor">
+      <pose>0 0 0.1 0 0 0</pose>
+      <link name="body">
+        <gravity>false</gravity>
+        <kinematic>true</kinematic>
+        <visual name="frame">
+          <geometry><box><size>0.5 0.5 0.1</size></box></geometry>
+          <material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material>
+        </visual>
+        <visual name="arm1"><pose>0 0 0 0 0 0.785</pose>
+          <geometry><box><size>0.45 0.03 0.02</size></box></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient></material></visual>
+        <visual name="arm2"><pose>0 0 0 0 0 -0.785</pose>
+          <geometry><box><size>0.45 0.03 0.02</size></box></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient></material></visual>
+        <visual name="rod"><pose>0.385 0 -0.06 0 0 0</pose>
+          <geometry><box><size>0.47 0.016 0.016</size></box></geometry>
+          <material><ambient>0.08 0.08 0.08 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material></visual>
+        <visual name="nose"><pose>0.14 0 0 0 0 0</pose>
+          <geometry><box><size>0.05 0.06 0.05</size></box></geometry>
+          <material><ambient>0.95 0.55 0.05 1</ambient><diffuse>0.95 0.55 0.05 1</diffuse></material></visual>
+        <sensor name="cam" type="camera">
+          <pose>0.16 0 0.02 0 -0.349 0</pose>
+          <always_on>true</always_on>
+          <update_rate>9</update_rate>
+          <camera>
+            <horizontal_fov>1.0856</horizontal_fov>
+            <image><width>160</width><height>120</height><format>R8G8B8</format></image>
+            <clip><near>0.05</near><far>300</far></clip>
+            <noise><type>gaussian</type><mean>0</mean><stddev>0.01</stddev></noise>
+          </camera>
+        </sensor>
+      </link>
+      <plugin name="arms_bridge" filename="libarms_bridge.so">
+        <camera>cam</camera>
+        <balloon>balloon</balloon>
+        <max_angle_deg>35</max_angle_deg>
+        <full_stick_rate_dps>400</full_stick_rate_dps>
+        <hover_thr>0.5</hover_thr>
+        <hit_radius>1.2</hit_radius>
+        <tag>tag</tag>
+        <tip_x>0.62</tip_x>
+        <tip_z>-0.06</tip_z>
+        <rope_top>-1.0</rope_top>
+        <rope_bottom>-2.6</rope_bottom>
+        <catch_r>0.13</catch_r>
+      </plugin>
+    </model>
+  </world>
+</sdf>

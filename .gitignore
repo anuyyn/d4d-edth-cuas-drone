@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.mp4
+*.log
+events.json
+event_log.txt
+snap/
+mydrone_photos/
+mydrone_crops/
+*.pt

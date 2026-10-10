@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="running_track">
+    <static>true</static>
+    <link name="l">
+      <visual name="ground">
+        <pose>0 0 -0.005 0 0 0</pose>
+        <geometry><box><size>220.0 120.0 0.01</size></box></geometry>
+        <material><script>
+          <uri>model://running_track/materials/scripts</uri>
+          <uri>model://running_track/materials/textures</uri>
+          <name>RunningTrack/Ground</name>
+        </script></material>
+      </visual>
+    </link>
+  </model>
+</sdf>

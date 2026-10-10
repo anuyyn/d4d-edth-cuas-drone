@@ -1,0 +1,140 @@
+Downloading: "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth" to /home/user/.cache/torch/hub/checkpoints/mobilenet_v3_small-047dcff4.pth
+
+  0%|          | 0.00/9.83M [00:00<?, ?B/s]
+  4%|▍         | 384k/9.83M [00:00<00:02, 3.84MB/s]
+ 14%|█▍        | 1.38M/9.83M [00:00<00:01, 7.63MB/s]
+ 27%|██▋       | 2.62M/9.83M [00:00<00:00, 9.80MB/s]
+ 39%|███▉      | 3.88M/9.83M [00:00<00:00, 10.8MB/s]
+ 55%|█████▍    | 5.38M/9.83M [00:00<00:00, 12.4MB/s]
+ 67%|██████▋   | 6.62M/9.83M [00:00<00:00, 12.5MB/s]
+ 89%|████████▉ | 8.75M/9.83M [00:00<00:00, 15.4MB/s]
+100%|██████████| 9.83M/9.83M [00:00<00:00, 13.2MB/s]
+ep 1 loss 1.206  val 균형정확도 0.721  (9s)
+ep 2 loss 0.707  val 균형정확도 0.836  (16s)
+ep 3 loss 0.473  val 균형정확도 0.937  (22s)
+ep 4 loss 0.389  val 균형정확도 0.904  (28s)
+ep 5 loss 0.357  val 균형정확도 0.878  (33s)
+ep 6 loss 0.338  val 균형정확도 0.845  (39s)
+ep 7 loss 0.334  val 균형정확도 0.885  (45s)
+ep 8 loss 0.307  val 균형정확도 0.928  (51s)
+ep 9 loss 0.301  val 균형정확도 0.966  (57s)
+ep10 loss 0.287  val 균형정확도 0.963  (63s)
+ep11 loss 0.285  val 균형정확도 0.966  (69s)
+ep12 loss 0.283  val 균형정확도 0.969  (74s)
+ep13 loss 0.269  val 균형정확도 0.965  (80s)
+ep14 loss 0.272  val 균형정확도 0.972  (86s)
+ep15 loss 0.265  val 균형정확도 0.972  (92s)
+ep16 loss 0.259  val 균형정확도 0.980  (98s)
+ep17 loss 0.258  val 균형정확도 0.980  (104s)
+ep18 loss 0.258  val 균형정확도 0.977  (110s)
+ep19 loss 0.257  val 균형정확도 0.975  (115s)
+ep20 loss 0.253  val 균형정확도 0.975  (121s)
+  torch.onnx.export(net, torch.zeros(1, 3, SIZE, SIZE), f"{a.out}/cuas_cls.onnx", input_names=["input"],
+{
+ "classes": [
+  "balloon",
+  "bird",
+  "drone",
+  "none"
+ ],
+ "val_best_balanced_acc": 0.9799933381782946,
+ "test_confusion": [
+  [
+   166,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   136,
+   2,
+   3
+  ],
+  [
+   0,
+   4,
+   119,
+   0
+  ],
+  [
+   0,
+   2,
+   1,
+   148
+  ]
+ ],
+ "test_per_class_recall": {
+  "balloon": 1.0,
+  "bird": 0.965,
+  "drone": 0.967,
+  "none": 0.98
+ },
+ "test_balanced_acc": 0.9780377830550181,
+ "by_size_px": {
+  "6": {
+   "balanced_acc": 0.726,
+   "balloon": 0.801,
+   "bird": 0.461,
+   "drone": 0.667,
+   "none": 0.974
+  },
+  "8": {
+   "balanced_acc": 0.841,
+   "balloon": 0.867,
+   "bird": 0.702,
+   "drone": 0.846,
+   "none": 0.947
+  },
+  "12": {
+   "balanced_acc": 0.912,
+   "balloon": 0.91,
+   "bird": 0.872,
+   "drone": 0.927,
+   "none": 0.94
+  },
+  "16": {
+   "balanced_acc": 0.934,
+   "balloon": 0.94,
+   "bird": 0.915,
+   "drone": 0.935,
+   "none": 0.947
+  },
+  "24": {
+   "balanced_acc": 0.958,
+   "balloon": 0.964,
+   "bird": 0.986,
+   "drone": 0.943,
+   "none": 0.94
+  },
+  "32": {
+   "balanced_acc": 0.955,
+   "balloon": 0.964,
+   "bird": 0.993,
+   "drone": 0.902,
+   "none": 0.96
+  },
+  "48": {
+   "balanced_acc": 0.979,
+   "balloon": 0.982,
+   "bird": 0.986,
+   "drone": 0.967,
+   "none": 0.98
+  },
+  "64": {
+   "balanced_acc": 0.978,
+   "balloon": 0.976,
+   "bird": 0.979,
+   "drone": 0.976,
+   "none": 0.98
+  },
+  "128": {
+   "balanced_acc": 0.978,
+   "balloon": 1.0,
+   "bird": 0.965,
+   "drone": 0.967,
+   "none": 0.98
+  }
+ }
+}
+저장: /mnt/c/Users/user/Documents/drone-hackathon/cuas/appearance/out

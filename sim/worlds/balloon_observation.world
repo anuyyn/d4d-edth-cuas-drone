@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+  <world name="balloon_observation">
+    <gravity>0 0 -9.81</gravity>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <scene>
+      <ambient>0.65 0.65 0.65 1</ambient>
+      <background>0.45 0.70 0.95 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+
+    <model name="fixed_observation_camera">
+      <static>true</static>
+      <pose>0 0 0.5 0 0 0</pose>
+
+      <link name="camera_link">
+        <visual name="housing">
+          <geometry>
+            <box>
+              <size>0.25 0.25 0.15</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15 0.15 0.18 1</ambient>
+            <diffuse>0.15 0.15 0.18 1</diffuse>
+          </material>
+        </visual>
+
+        <sensor name="up_camera" type="camera">
+          <pose>0 0 0.10 0 -1.57079632679 0</pose>
+          <always_on>true</always_on>
+          <update_rate>30</update_rate>
+          <visualize>true</visualize>
+          <topic>/observation/up_camera/image</topic>
+
+          <camera>
+            <horizontal_fov>1.0471975512</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.05</near>
+              <far>100</far>
+            </clip>
+          </camera>
+        </sensor>
+      </link>
+    </model>
+
+
+    <model name="red_balloon">
+      <static>true</static>
+      <pose>0 0 6 0 0 0</pose>
+
+      <link name="balloon_link">
+        <visual name="balloon">
+          <geometry>
+            <sphere>
+              <radius>0.6</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.8 0.03 0.03 1</ambient>
+            <diffuse>0.95 0.04 0.04 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+          </material>
+        </visual>
+
+        <visual name="string">
+          <pose>0 0 -3 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.01</radius>
+              <length>6</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.9 0.9 0.9 1</ambient>
+            <diffuse>0.9 0.9 0.9 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+
+    <model name="drone_model">
+      <pose>2 2 5 0 0 0</pose>
+      <link name="body">
+        <gravity>false</gravity>
+        <kinematic>true</kinematic>
+        <visual name="frame">
+          <geometry><box><size>0.25 0.25 0.08</size></box></geometry>
+          <material><ambient>0.1 0.3 0.8 1</ambient><diffuse>0.15 0.35 0.9 1</diffuse></material>
+        </visual>
+        <visual name="marker">
+          <pose>0.15 0 0 0 0 0</pose>
+          <geometry><box><size>0.06 0.06 0.06</size></box></geometry>
+          <material><ambient>0.9 0.2 0.1 1</ambient><diffuse>0.9 0.2 0.1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <gui fullscreen="0">
+      <camera name="overview">
+        <pose>10 -10 7 0 0.25 2.35619449</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+  </world>
+</sdf>

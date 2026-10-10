@@ -1,0 +1,120 @@
+{
+ "classes": [
+  "balloon",
+  "bird",
+  "drone",
+  "none",
+  "trash"
+ ],
+ "val_best_balanced_acc": 0.992323500680836,
+ "test_confusion": [
+  [
+   166,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   3,
+   292,
+   0,
+   4,
+   0
+  ],
+  [
+   0,
+   0,
+   60,
+   0,
+   0
+  ],
+  [
+   0,
+   3,
+   0,
+   188,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ ],
+ "test_per_class_recall": {
+  "balloon": 1.0,
+  "bird": 0.977,
+  "drone": 1.0,
+  "none": 0.984,
+  "trash": 0.0
+ },
+ "test_balanced_acc": 0.9902204556199549,
+ "by_size_px": {
+  "6": {
+   "balanced_acc": 0.868,
+   "balloon": 0.813,
+   "bird": 0.732,
+   "drone": 0.967,
+   "none": 0.958
+  },
+  "8": {
+   "balanced_acc": 0.91,
+   "balloon": 0.873,
+   "bird": 0.866,
+   "drone": 1.0,
+   "none": 0.901
+  },
+  "12": {
+   "balanced_acc": 0.943,
+   "balloon": 0.898,
+   "bird": 0.946,
+   "drone": 1.0,
+   "none": 0.927
+  },
+  "16": {
+   "balanced_acc": 0.953,
+   "balloon": 0.934,
+   "bird": 0.953,
+   "drone": 1.0,
+   "none": 0.927
+  },
+  "24": {
+   "balanced_acc": 0.968,
+   "balloon": 0.964,
+   "bird": 0.96,
+   "drone": 1.0,
+   "none": 0.948
+  },
+  "32": {
+   "balanced_acc": 0.979,
+   "balloon": 0.976,
+   "bird": 0.97,
+   "drone": 1.0,
+   "none": 0.969
+  },
+  "48": {
+   "balanced_acc": 0.988,
+   "balloon": 0.988,
+   "bird": 0.983,
+   "drone": 1.0,
+   "none": 0.979
+  },
+  "64": {
+   "balanced_acc": 0.986,
+   "balloon": 0.988,
+   "bird": 0.983,
+   "drone": 1.0,
+   "none": 0.974
+  },
+  "128": {
+   "balanced_acc": 0.99,
+   "balloon": 1.0,
+   "bird": 0.977,
+   "drone": 1.0,
+   "none": 0.984
+  }
+ }
+}
