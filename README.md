@@ -2,6 +2,8 @@
 
 KOREAN DEFENSE TECH HACKATHON (D4D x EDTH, 2026.10.10~11, 서울) 출품작입니다.
 
+시연 영상: https://anuyyn.github.io/d4d-edth-cuas-drone/
+
 소형 정찰드론이 비행 중에 카메라 영상을 기체 안의 Raspberry Pi에서 직접 분석해 드론을 찾아냅니다.
 찾은 결과는 조종사 고글 화면에 박스와 글자로 표시되고, 같은 시각 Wi-Fi로 관제 노트북에도 전송됩니다.
 관제 근무자는 노트북 화면에서 탐지 내용을 확인한 뒤 대응을 지시하고, 대응(요격, 추적 태그 부착)은 Gazebo 시뮬레이션으로 보여줍니다.
