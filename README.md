@@ -189,7 +189,8 @@ sim/                  Gazebo 월드, 플러그인, 요격/부착 시뮬
 trainer/              FPV 훈련기, IMU 펌웨어
 docs/계획.pdf         시연 계획 초안
 docs/계획최종.pdf     시연 계획 최종본 (문제 제기, 클래스별 대응, 화면 정의)
-docs/presentation.pdf 발표 자료
+docs/presentation.pdf 발표 자료 (PDF)
+docs/presentation.pptx 발표 자료 (PPTX, 영상·발표 노트 포함)
 ```
 
 
